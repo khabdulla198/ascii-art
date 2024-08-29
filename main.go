@@ -7,8 +7,13 @@ import (
 
 func main() {
 	args := os.Args
-	ascii.Validation(args)
 
-	
+	wordTofind, file := ascii.Validation(args)
+
+	//turn the file into an array
+	fileArray := ascii.FileToArray(file)
+	//find the location of each letter of the word
+
+	//print the word as an ascii art into the terminal
 
 }
