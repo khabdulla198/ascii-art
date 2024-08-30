@@ -23,7 +23,14 @@ func main() {
 	result := ""
 
 	// For loop to generate for each split
-
+	for _, word := range splitstring {
+		asciiArt, err := ascii.GenerateAscii(word, fileArray)
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		result += asciiArt + "\n"
+	}
 	//print the word as an ascii art into the terminal
 	fmt.Print(result)
 

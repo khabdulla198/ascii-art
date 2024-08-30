@@ -4,7 +4,7 @@ import "fmt"
 
 func GenerateAscii(str string, fileArray []string) (string, error) {
 	result := ""
-	for line := 0; line <= 7; line++ {
+	for line := 0; line <= 7; line++ { //each character has a height of 8 characters
 		for _, char := range str {
 			location, error := charLocator(rune(char))
 			if error != nil {
