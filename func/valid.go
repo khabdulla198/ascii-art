@@ -7,7 +7,7 @@ import (
 
 func Validation(args []string) (string, string, error) {
 	file := "standard.txt" //making default as standard
-	wordTofind := args[1]  // declaring word/phrase
+
 	if len(args) > 3 || len(args) == 1 {
 		//error message for incorrect amount of input
 		return "", "", fmt.Errorf("Error:There should be one or two string argument\n[STRING] [OPTIONAL BANNER]")
@@ -29,6 +29,6 @@ func Validation(args []string) (string, string, error) {
 			return "", "", fmt.Errorf("error: only two arguments are allowed [STRING] [OPTIONAL BANNER]\n Banners that are available are: standard, thinkertoy, and shadow")
 		}
 	}
-
+	wordTofind := args[1] // declaring word/phrase
 	return wordTofind, file, nil
 }
