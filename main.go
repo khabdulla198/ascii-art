@@ -3,6 +3,7 @@ package main
 import (
 	ascii "ascii/func"
 	"fmt"
+	"math"
 	"os"
 	"strings"
 )
@@ -32,7 +33,7 @@ func main() {
 
 	//check if wordTofind only has \n
 	lenWord := len(wordTofind)
-	if lenWord/2 == counter {
+	if math.Round(float64(lenWord)/2) == float64(counter) {
 		i := 0
 		for i != counter {
 			fmt.Print("\n")
