@@ -28,7 +28,7 @@ func main() {
 			fmt.Print("\n")
 			break
 		} else{
-		fmt.Println(string('\n'))
+		//fmt.Println(string('\n'))
 		asciiArt, err := ascii.GenerateAscii(word, fileArray)
 		if err != nil {
 			fmt.Println(err)
